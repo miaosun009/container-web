@@ -1,0 +1,41 @@
+.record{
+  :global{
+    .tabs{
+      height: 100%;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      .ant-tabs-content {
+        height: 100%;
+      }
+      .ant-collapse-content{
+        background: #0c0e15;
+        border-radius: 0;
+      }
+      .ant-tabs-tabpane{
+        height: 100%;
+        overflow: auto;
+      }
+      .ant-tabs-top-bar{
+        background-image: linear-gradient(-180deg,#2d323e,#1b1f25);
+        padding-left: 20px;
+        border: none;
+        .ant-tabs-tab{
+          height: 64px;
+          line-height: 64px;
+          padding: 0 16px;
+          font-size: 14px;
+        }
+        .ant-tabs-nav .ant-tabs-tab-active{
+          color: #4ed8da;
+        }
+        .ant-tabs-nav .ant-tabs-tab:hover{
+          color: #37abad;
+        }
+        .ant-tabs-ink-bar{
+          background: #31a4a6;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,76 @@
+.header {
+  display: flex;
+  flex: 0 0 84px;
+  /* Rectangle 2: */
+  background-image: linear-gradient(-180deg,#2d323e,#1b1f25);
+  height: 84px;
+  line-height: 84px;
+  color: #ffffffa6;
+  position: relative;
+  &::after{
+    position: absolute;
+    content: ' ';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 84px;
+    opacity: .2;
+    background-image: url("../../../../assets/images/bg.png");
+    background-size:cover ;
+    z-index: 0;
+    background-repeat: no-repeat;
+  }
+  .logo {
+    z-index: 99;
+    background-image: url("../../../../assets/images/logo.png");
+    background-repeat: no-repeat;
+    background-position: 30px center;
+    padding-left: 20px;
+    flex: 0 0 400px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+  }
+  .menu {
+    z-index: 999;
+    flex: auto;
+    :global{
+      .ant-menu{
+        font-size: 20px;
+      }
+      .ant-menu-item{
+        padding: 0 40px;
+      }
+      .ant-menu-item .anticon{
+        font-size: 28px;
+        margin-right: 15px;
+      }
+      .ant-menu-horizontal{
+        line-height: 84px;
+      }
+      .ant-menu-dark{
+        background: none;
+      }
+      .ant-menu.ant-menu-dark .ant-menu-item-selected{
+        background: none;
+        >a{
+          color: #4ed8da;
+        }
+      }
+      .ant-menu-dark .ant-menu-item > a{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        &:hover{
+          color: #4ed8da;
+        }
+      }
+    }
+  }
+  .user-info {
+    z-index: 1;
+    flex: 0 0 80px;
+    font-size: 18px;
+  }
+}

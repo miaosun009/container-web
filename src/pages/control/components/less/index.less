@@ -1,0 +1,321 @@
+.list-box {
+  flex: 0 0 250px;
+  border-right: 2px solid #202842;
+
+  .list-title:extend(.public-title) {
+    flex: 0 0 40px;
+  }
+
+  .list-search-box {
+    flex: 0 0 30px;
+    padding: 15px;
+    border-bottom: 1px solid #202842;
+  }
+
+  .list-cont {
+    flex: auto;
+    overflow: auto;
+  }
+}
+
+.control-box {
+  background: #040508;
+  flex: 0 0 700px;
+  margin-left: 15px;
+  .title:extend(.public-title) {
+    flex: 0 0 40px;
+  }
+
+  .content {
+    flex: auto;
+    overflow: auto;
+    .air {
+      background-image: -webkit-gradient(linear,left top,left bottom,from(#161a1f),to(#0f1115));
+      border-bottom: 15px solid #000;
+      .current-state {
+        display: flex;
+        .item {
+          height: 128px;
+          text-align: center;
+          flex: 1;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          align-items: center;
+          font-size: 32px;
+          background: rgba(0,0,0,.5);
+          border-bottom: 2px solid #000;
+          &:not(:last-child){
+            border-right: 1px dotted #2a2a2a;
+          }
+
+          .item-title {
+            font-size: 12px;
+            color: #959da6;
+          }
+        }
+      }
+
+      .set-status {
+        padding: 30px 15px;
+        display: flex;
+        .left {
+          flex: 0 0 200px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          :global {
+            .powerOnOff {
+              &.ant-switch {
+                width: 128px;
+                height: 128px;
+                border-radius: 64px;
+                border: none;
+                background-color: transparent;
+                background-image: url('../../../../assets/images/Group10.png');
+                background-repeat: no-repeat;
+                background-size: 100%;
+                position: relative;
+                &::after {
+                  display: none;
+                }
+                &.ant-switch-checked {
+                  background-image: url('../../../../assets/images/Group11.png');
+                }
+              }
+            }
+          }
+        }
+
+        .center {
+          flex: auto;
+          .item {
+            margin-top: 15px;
+            margin-bottom: 20px;
+            display: flex;
+            .item-value {
+              flex: auto;
+              :global {
+                .ant-radio-group {
+                  width: 100%;
+                  display: flex;
+                  background-image: linear-gradient(-180deg,#2d323e,#1b1f25);
+                  border-radius: 4px;
+                  box-shadow: 2px 1px 8px 0px rgba(0, 0, 0, 0.31);
+                  & label {
+                    flex: 1 1 100px;
+                    text-align: center;
+                    border: none;
+                    background: transparent;
+                    color: #555c67;
+                  }
+                  .ant-radio-button-wrapper {
+                    border: none;
+                    font-size: 18px;
+                  }
+                  .ant-radio-button-wrapper:not(:first-child)::before {
+                    width: 1px;
+                    background-color: rgba(34, 38, 41, 0.88);
+                  }
+                  .ant-radio-button-wrapper:not(:first-child)::after {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    display: block;
+                    width: 1px;
+                    height: 100%;
+                    background-color: #333e44e0;
+                    content: '';
+                  }
+                  .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled)::before {
+                    width: 1px !important;
+                    background-color: #1f212b !important;
+                    opacity: 1;
+                  }
+                  .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled) {
+                    box-shadow: none;
+                    background: none;
+                  }
+                  .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):focus-within {
+                    outline: none !important;
+                  }
+                  .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled) {
+                    background-image: linear-gradient(to top, #191c1e 0%, #00000047 100%);
+                    color: #4ed8da;
+                  }
+                }
+
+              }
+            }
+          }
+          :global{
+            .ant-slider:not(.ant-slider-disabled)  {
+              margin-bottom: 15px;
+              .ant-slider-rail{
+                /* Rectangle 7: */
+                /* Rectangle 7: */
+                background-image: linear-gradient(90deg, #4ED8DA 0%, #53A0FD 50%, #F36B7E 96%);
+              }
+              .ant-slider-dot{
+                background-color: #2e2f3a;
+                border: 2px solid #606ab6;
+              }
+              .ant-slider-track{
+                background: none;
+              }
+
+
+            }
+          }
+        }
+
+        .right {
+          flex: 0 0 200px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .send-button {
+            width: 128px;
+            height: 128px;
+            border-radius: 64px;
+            border: none;
+            background-color: transparent;
+            background-image: url('../../../../assets/images/Group12.png');
+            background-repeat: no-repeat;
+            background-size: 100%;
+            position: relative;
+          }
+          .send-button:not([disabled]) {
+            &:hover {
+              background-image: url('../../../../assets/images/Group13.png');
+            }
+          }
+          :global {
+            .ant-btn-primary[disabled] {
+              opacity: 0.5;
+            }
+            .ant-btn-primary {
+              box-shadow: none;
+            }
+          }
+        }
+      }
+    }
+
+    .power-plug {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0px;
+
+      .item {
+        flex: 1 0 140px;
+        height: 140px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 64px;
+        cursor: pointer;
+        background-image: url('../../../../assets/images/dianyuan.svg');
+        background-size: 30%;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-bottom: #000 solid 15px;
+        &:hover {
+          background-color: #0a0c14;
+        }
+      }
+      .item.on {
+        background-image: url('../../../../assets/images/dianyuan-on.svg');
+      }
+    }
+  }
+}
+
+.logs {
+  flex: auto;
+  min-width: 400px;
+  margin-left: 15px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#0c0d0e), to(#0f1115));
+
+  .title:extend(.public-title) {
+    flex: 0 0 40px;
+  }
+
+  .content {
+    flex: auto;
+    padding: 20px;
+    overflow: auto;
+
+    span {
+      user-select: text;
+    }
+  }
+  .info{
+    color: #8d96a1;
+  }
+  .success{
+    color: #37abad;
+  }
+  .error{
+    color: #b4465a;
+  }
+}
+
+.public-title {
+  padding: 16px;
+  background-image: linear-gradient(-180deg,#2d323e,#1b1f25);
+  border-bottom: 2px solid #000;
+  font-size: 20px;
+  color: #ffffffa6;
+}
+
+:global(.ant-spin-nested-loading) {
+  flex: auto;
+  overflow: auto;
+
+  .list {
+    .item {
+      padding: 10px 15px;
+      position: relative;
+      cursor: pointer;
+      &.active {
+        background-color: #202842 !important;
+      }
+      &:hover {
+        background: #141414;
+      }
+
+      &:not(:last-child) {
+        border-bottom: 1px solid #202842;
+      }
+
+      .item-add-time {
+        position: absolute;
+        font-size: 12px;
+        right: 15px;
+        top: 13px;
+        color: rgb(118, 118, 118);
+      }
+
+      .item-cid {
+        display: block;
+        font-size: 16px;
+        font-weight: bold;
+
+        & i {
+          margin-right: 5px;
+        }
+      }
+
+      .item-location {
+        font-size: 12px;
+        display: block;
+
+        & strong {
+          font-size: 14px;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}
